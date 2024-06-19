@@ -8,7 +8,10 @@ defmodule PokemonApiWeb.Router do
   scope "/api", PokemonApiWeb do
     pipe_through :api
 
-    get "/pokemon", PokemonController, :getPokemons
+    resources "/pokemon", PokemonController, except: [:edit, :new]
+    resources "/trainer", TrainerController, except: [:edit, :new]
+
+    get "/fight", BattleController, :fight
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

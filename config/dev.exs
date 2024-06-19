@@ -5,7 +5,7 @@ config :pokemon_api, PokemonApi.Repo,
   username: "postgres",
   password: "senitapqan",
   hostname: "localhost",
-  database: "pokemon_dev_api",
+  database: "pokemon_api_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
